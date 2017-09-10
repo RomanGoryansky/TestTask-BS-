@@ -36,6 +36,11 @@ namespace TestJob_v2
         }
         public void Complete(string request)            //выбираем 5 лучших
         {
+            if (request == "")
+            {
+                Console.WriteLine("You don't enter nothing");
+                return;
+            }                
             var suitable = Filling(request);
             foreach (var str in suitable)
             {

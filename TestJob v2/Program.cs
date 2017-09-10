@@ -20,7 +20,7 @@ namespace TestJob_v2
                 string request = Console.ReadLine();
                 if (request == "###")
                 {
-                    Console.WriteLine("Application complete");
+                    Console.WriteLine("Application complete. Push any button");
                     Thread.Sleep(2000);
                     return;
                 }
