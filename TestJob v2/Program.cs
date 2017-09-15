@@ -20,7 +20,7 @@ namespace TestJob_v2
                 string request = Console.ReadLine();
                 if (request == "###")
                 {
-                    Console.WriteLine("Application complete. Push any button");
+                    Console.WriteLine("Application complete.");
                     Thread.Sleep(2000);
                     return;
                 }
@@ -33,10 +33,7 @@ namespace TestJob_v2
             {
                 Console.WriteLine(ex.Message);
             }
-            finally
-            {
-                Console.ReadKey(true);
-            }
+            Console.ReadKey(true);
         }
     }
 }
