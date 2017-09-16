@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
-using System.ComponentModel.DataAnnotations;
 namespace TestJob_v2
 {
     class Program
@@ -16,22 +15,18 @@ namespace TestJob_v2
             {
                 Console.Write("Please, enter path to the file - ");
                 string path = Console.ReadLine();
+                Dictionary words = new Dictionary(path);
                 Console.Write("Please, enter your word: ");
                 string request = Console.ReadLine();
                 if (request == "###")
                 {
                     Console.WriteLine("Application complete.");
-                    Thread.Sleep(3000);
+                    Thread.Sleep(2000);
                     return;
-                }
-                else if (request == "")
-                {
-                    Console.WriteLine("You didn't enter anything");
                 }
                 else
                 {
-                    Dictionary words = new Dictionary(path, request);
-                    words.Complete();
+                    words.Complete(request);
                 }
             }
             catch (Exception ex)
